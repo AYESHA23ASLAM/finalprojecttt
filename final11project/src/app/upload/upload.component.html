@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <script>
+    $("#file-1").fileinput({
+    theme: 'fa',
+    uploadUrl: '#',
+    allowedFileExtensions: ['jpg', 'png', 'gif'],
+    overwriteInitial: false,
+    maxFileSize:2000,
+    maxFilesNum: 10,
+    slugCallback: function (filename) {
+        return filename.replace('(', '_').replace(']', '_');
+    }
+});
+  </script>
+</head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-sm-12 col-11 main-section">
+                    <h1 class="text-center text-danger">FOR UPLOADING ASSIGNMENTS</h1><br>
+                    <form enctype="multipart/form-data">
+                      <div class="form-group">
+                          <div class="file-loading">
+                              <input id="file-1" type="file" multiple class="file" data-overwrite-initial="false" data-min-file-count="2">
+                          </div>
+                      </div>
+                  </form>            
+                </div>
+            </div>
+        </div>
+       <!-- Footer -->
+<footer >
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center ">© 2018 Copyright
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+    </body>
+    </html>
+

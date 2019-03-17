@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Saira+Condensed" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="offset-lg-4 col-lg-4 login-part p-3 rounded">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-12 text-center">
+					<img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/supportmale-512.png" class="w-50 border border-success rounded-circle" style="margin-top: -110px;">
+				</div>
+				<div class="col-lg-12 col-md-12" style="margin-top: -60px;">
+					<h3 class="text-center text-white mt-sm-5">User Login</h3>
+					<p>
+						<a href="https://twitter.com/" class="btn btn-block btn-twitter mt-sm-3"><i class="fa fa-twitter"></i>   SignIn via 
+							Twitter</a>
+						<a href="https://facebook.com/" class="btn btn-block btn-facebook mt-sm-3"><i class="fa fa-facebook"></i>  SignIn via 
+							facebook</a>
+					</p>
+				</div>
+				<div class="col-lg-12 col-md-12 col-12 form-part" style="margin-bottom:100px;">
+					<form id="login" class="login-form" [formGroup]="myForm">
+					  	<div class="form-row">
+						    <div class="col-lg-12 col-md-12 col-12">
+						      	<div class="input-group">
+							        <div class="input-group-prepend">
+							          	<div class="input-group-text"><i class="fa fa-user"></i></div>
+							        </div>
+											<input formControlName="email" class="w-75"  type="email" placeholder="email" maxlength="30" [(ngModel)]="email" name="email" #usr/>
+							        <button type="button" class="btn btn-defualt txt-btn txt-remove-btn"><i class="fa fa-times-circle"></i></button>
+						      	</div>
+						    </div>
+						    <div class="col-lg-12 col-md-12 col-12">
+								<div class="input-group">
+									<div class="input-group-prepend">
+							          	<div class="input-group-text"><i class="fa fa-lock"></i></div>
+							        </div>
+											<input formControlName="password" class="w-75" type="password" placeholder="password" maxlength="20" [(ngModel)]="password" name="password" #pwd/>
+									<button class="btn btn-default txt-btn pwd-btn" type="button"><i class="fa fa-eye" aria-hidden="true"></i></button>
+								</div>
+							</div>
+							<div *ngIf="email">
+								{{ myForm.value | json }}
+					</div>
+						    <div class="col-lg-12 col-md-12 col-12">
+						      	<div class="form-check">
+						        	<input class="form-check-input" type="checkbox" id="Check">
+						        	<label class="form-check-label text-white" for="Check">Remember me</label>
+						      		<a href="#" target="_blank" class="float-right"style="font-size:20px">Forgot Password?</a>
+						      	</div>
+						    </div>
+					    	<div class="col-lg-12 col-md-12 col-12">
+					      		<button  class="btn btn-success btn-block " (click)="validate(usr, pwd)">Log In</button>
+								</div>
+								<div class="col-lg-12 col-md-12 col-12 text-center" style=" color:white">
+										Don't have an account?<a routerLink="/join" class="ml-sm-2" style="font-size:20px;">Sign Up</a>
+									</div>
+					  	</div>
+					</form>	
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
+    

@@ -1,0 +1,28 @@
+#logo{
+    text-align: center;
+    align-items:center;
+    background:#adb0b38a;
+     
+}
+.social-part .fa{
+    padding-right:20px;
+}
+ul li a{
+    margin-right: 20px;
+}
+.fa-twitter:before {
+    content: "\f099";
+    color: #6c757d;
+}
+.fa-facebook:before {
+    color: #6c757d;
+}
+.bg-light {
+    background-color: #000000!important;
+    color: #fffffff2;
+    font-size: 18px;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #f8f9fad1;
+}
+

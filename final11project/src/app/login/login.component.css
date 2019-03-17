@@ -1,0 +1,57 @@
+*{
+	font-family: 'Saira Condensed', sans-serif;
+}
+body{
+	background-image: url("/assets/images/pic10.png");
+	background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.login-part{
+	transform: translateY(40%);
+	box-shadow: 0px 0px 50px #fff;
+	background:linear-gradient(rgba(55,0,0,.6),rgba(0,0,0,.6))
+}
+.login-part img,.form-part .input-group,.submit-btn{
+	margin:10px 0px;
+}
+.form-row .txt-btn{
+	border-radius:0px 5px 5px 0px;
+	width:13%;
+}
+.input-group input{
+	color:#000;
+	font-weight: bold;
+	letter-spacing:1px;
+}
+.invalid-tooltip{
+    line-height:0 !important;
+    width: 350px;
+}
+.control:invalid{
+	border:5px solid red !important;
+}
+.form-check{
+	margin-top:5px;
+}
+.row{
+	height:465px;
+}
+.btn-facebook {
+    background-color: #405D9D;
+    color: #fff;
+}
+.btn-twitter {
+    background-color: #42AEEC;
+    color: #fff;
+}
+footer{
+    margin-bottom:1px;
+    color:white;
+    box-shadow: inset 1px -1px 3px 0px #0b191903;
+    background: rgba(23, 124, 120, 0.77);
+    height:50px;
+    padding-top:15px;
+    padding-bottom: 15px;
+    
+    }

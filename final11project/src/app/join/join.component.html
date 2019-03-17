@@ -1,0 +1,92 @@
+<div class="fluid-container">
+  <div class="row">
+    <div class="col-sm-12">
+    <div class="card">
+    <article class=" container mb-sm-5 card-body mx-auto w-50 " style="box-shadow: 1px 1px 20px 2px #868e96bf;margin-top:100px;
+  ">
+      <h4 class="card-title mt-3 text-center">Create Account</h4>
+      <p class="text-center">Get started with your free account</p>
+      <p>
+        <a href="https://twitter.com/" class="btn btn-block btn-twitter"><i class="fa fa-twitter"></i>     SignIn via 
+          Twitter</a>
+        <a href="https://facebook.com/" class="btn btn-block btn-facebook"><i class="fa fa-facebook"></i>  SignIn via 
+          facebook</a>
+      </p>
+      <p class="divider-text">
+            <span class="bg-light">OR</span>
+        </p>
+      <form class="register-form" [formGroup]="myForm">
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+         </div>
+         <input formControlName="user" type="text" style="width:94%;" maxlength="20" placeholder="Username" [(ngModel)]="username" name="username" #usr/>
+        </div> <!-- form-group// -->
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+         </div>
+         <input formControlName="email"  type="email" style="width:93%;
+        " maxlength="30" placeholder="Email" [(ngModel)]="email" name="email" #emailAddr/> 
+        </div> <!-- form-group// -->
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+        </div>
+        <select class="custom-select" style="max-width: 120px;">
+            <option selected="">+971</option>
+            <option value="1">+972</option>
+            <option value="2">+198</option>
+            <option value="3">+701</option>
+        </select>
+          <input name="" class="form-control" placeholder="Phone number" type="text">
+        </div> <!-- form-group// -->
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+        </div>
+        <select class="form-control">
+          <option selected=""> Select Department</option>
+          <option>BBA</option>
+          <option>IT</option>
+          <option>BSM</option>
+        </select>
+      </div> <!-- form-group end.// -->
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+        </div>
+        <input formControlName="password" type="password" style="width:94%;" maxlength="20" placeholder="Password" [(ngModel)]="password" name="password" #pwd />
+        </div> <!-- form-group// -->
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+        </div>
+        <input formControlName="password" type="password" style="width:94%;" maxlength="20" placeholder="Repeat Password" [(ngModel)]="password" name="password" #pwd />
+        </div> 
+        <div *ngIf="username">
+          {{ myForm.value | json }}
+       </div>
+        <!-- form-group// -->                                      
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block" (click)="create(usr, emailAddr, pwd)"> Create 
+              Account  </button>
+              <div *ngIf="valid">
+                {{ valid }}
+            </div>
+        </div> <!-- form-group// -->      
+        <p class="text-center">Have an account? <a routerLink="/login">Log In</a> </p>                                                                 
+    </form>
+    </article>
+    </div> <!-- card.// -->
+    
+    </div> 
+    </div>
+    </div>
+    <!--container end.//-->
+    <footer >
+        <div class="footer-copyright text-center ">© 2018 Copyright
+        </div> 
+      </footer>
+    
+    

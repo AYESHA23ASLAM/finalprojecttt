@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+      <html>
+      <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+      </head>
+      <body>
+      <div class="container main-section">
+        <div class="row justify-content-md-center">
+          <div class="col-lg-3 col-sm-4 col-12 text-center">
+            <div class="row main-box-layout img-thumbnail">
+              <div class="col-lg-12 col-sm-12 col-12 box-icon-section " style="padding:30px;background-color: rgb(92, 44, 145);">
+                <i class="fab fa-html5" aria-hidden="true" style="padding:20px;"></i>
+              </div>
+              <div class="col-lg-12 col-sm-12 col-12 box-text-section">
+                <button class="btn btn-light "style="width:100%;"(click)="html5Course()">HTML5</button>
+              </div>
+              <div class="label">
+                <h3><span class="badge badge-pill" style="background-color: rgb(92, 44, 145);">COURSE</span></h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-4 col-12 text-center">
+            <div class="row main-box-layout img-thumbnail">
+              <div class="col-lg-12 col-sm-12 col-12 box-icon-section"style="padding:30px;background-color: rgb(0, 75, 80);">
+                <i class="fab fa-java" aria-hidden="true"style="padding:20px;"></i>
+              </div>
+              <div class="col-lg-12 col-sm-12 col-12 box-text-section">
+                  <button class="btn btn-light "style="width:100%;"(click)="javaCourse()">JAVA</button>
+              </div>
+              <div class="label">
+                  <h3><span class="badge badge-pill" style="background-color: rgb(0, 75, 80);">COURSE</span></h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-4 col-12 text-center">
+            <div class="row main-box-layout img-thumbnail">
+              <div class="col-lg-12 col-sm-12 col-12 box-icon-section bg-danger"style="padding:30px;">
+                <i class="fab fa-php" aria-hidden="true"style="padding:20px;"></i>
+              </div>
+              <div class="col-lg-12 col-sm-12 col-12 box-text-section">
+                  <button class="btn btn-light " style="width:100%;" (click)="phpCourse()">PHP</button>
+              </div>
+              <div class="label">
+                <h3><span class="badge badge-pill bg-danger">COURSE</span></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-md-center">
+          <div class="col-lg-3 col-sm-4 col-12 text-center">
+            <div class="row main-box-layout img-thumbnail">
+              <div class="col-lg-12 col-sm-12 col-12 box-icon-section "style="padding:30px;background-color:
+              rgb(3, 42, 81);">
+                <i class="fab fa-js-square" aria-hidden="true"style="padding:20px;"></i>
+              </div>
+              <div class="col-lg-12 col-sm-12 col-12 box-text-section">
+                  <button class="btn btn-light "style="width:100%;" (click)="jsCourse()">JS</button>
+              </div>
+              <div class="label">
+                <h3><span class="badge badge-pill" style="background-color:
+                  rgb(3, 42, 81);">COURSE</span></h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-4 col-12 text-center">
+            <div class="row main-box-layout img-thumbnail">
+              <div class="col-lg-12 col-sm-12 col-12 box-icon-section bg-success"style="padding:30px;">
+                <i class="fab fa-css3" aria-hidden="true"style="padding:20px;"></i>
+              </div>
+              <div class="col-lg-12 col-sm-12 col-12 box-text-section">
+                  <button class="btn btn-light "style="width:100%;"(click)="cssCourse()">CSS</button>
+              </div>
+              <div class="label">
+                <h3><span class="badge badge-pill bg-success">COURSE</span></h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-4 col-12 text-center">
+            <div class="row main-box-layout img-thumbnail">
+              <div class="col-lg-12 col-sm-12 col-12 box-icon-section "style="padding:30px;background-color: rgb(155, 79, 150)">
+                <i class="fab fa-python" aria-hidden="true"style="padding:20px;"></i>
+              </div>
+              <div class="col-lg-12 col-sm-12 col-12 box-text-section">
+                  <button class="btn btn-light "style="width:100%;"(click)="pythonCourse()">PYTHON</button>
+              </div>
+              <div class="label">
+                <h3><span class="badge badge-pill" style=" background-color: rgb(155, 79, 150)">COURSE</span></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div *ngIf="test" id="append">
+        {{ response }}
+    </div>
+    <div *ngIf="test1" id="append1">
+        {{ response1 }}
+    </div>
+    <div *ngIf="test2" id="append2">
+      {{ response2 }}
+    </div>
+     <div *ngIf="test3" id="append3">
+    {{ response3 }}
+</div>
+<div *ngIf="test4" id="append4">
+  {{ response4 }}
+</div>
+<div *ngIf="test5" id="append5">
+  {{ response5 }}
+</div>
+      <footer >
+          <div class="footer-copyright text-center ">© 2018 Copyright
+          </div> 
+        </footer>
+      </body>
+      </html>
+
